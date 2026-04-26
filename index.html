@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Alarm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1 class="clock" id="clock">--:--:--</h1>
+
+    <form class="alarm-form" id="alarm-form">
+      <input type="time" id="alarm-time" required />
+      <button type="submit">セット</button>
+    </form>
+
+    <ul class="alarm-list" id="alarm-list"></ul>
+
+    <div class="ringing" id="ringing" hidden>
+      <p>⏰ アラーム</p>
+      <button type="button" id="stop-btn">停止</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

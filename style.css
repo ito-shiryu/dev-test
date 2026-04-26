@@ -1,0 +1,132 @@
+:root {
+  --bg: #f5f5f7;
+  --fg: #1d1d1f;
+  --accent: #0071e3;
+  --muted: #86868b;
+  --card: #ffffff;
+  --danger: #ff3b30;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.app {
+  width: min(90vw, 360px);
+  background: var(--card);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.clock {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin: 0 0 24px;
+  letter-spacing: 2px;
+}
+
+.alarm-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.alarm-form input[type="time"] {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #d2d2d7;
+  border-radius: 10px;
+  background: #fafafa;
+  color: var(--fg);
+}
+
+.alarm-form button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.alarm-form button:hover {
+  opacity: 0.85;
+}
+
+.alarm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.alarm-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: #fafafa;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.alarm-list .time {
+  font-variant-numeric: tabular-nums;
+}
+
+.alarm-list button {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.alarm-list:empty::before {
+  content: "アラーム未設定";
+  display: block;
+  text-align: center;
+  color: var(--muted);
+  padding: 12px 0;
+  font-size: 0.95rem;
+}
+
+.ringing {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff5f5;
+  border: 1px solid #ffd6d6;
+  border-radius: 12px;
+}
+
+.ringing p {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.ringing button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--danger);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
